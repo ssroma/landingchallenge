@@ -1,0 +1,24 @@
+<section id="home-section">
+    <div class="centering">
+        <h3 class="title is-3"> Chellenge Explained</h3>
+        <div class="content is-normal is-flex">
+            <ul>
+                <li> Setup a standard/generic Ruby on Rails project </li>
+                <li> The project should allow to retrieve information from different profiles from GitHub and store it in a database </li>
+                <ul>
+                    <li> Here you can choose to retrieve personal profiles or project profiles via GitHub API </li>
+                </ul>    
+                <li> We should be able to see what profiles/projects are stored in your database </li>
+                <li> We should be able to select two profiles/projects and present a visual comparison between them </li>
+                <li> The project can be broken down into three views: Get/Fetch profiles, view stored profiles, profiles compare </li>
+                <li> Explain how you did it (git commits are a good way to show how you evolved) </li>
+            </ul>
+        </div>
+        <div class="column is-flex is-justify-content-center is-align-items-center">
+            <div class="buttons">
+                <%= button_to "Search Profile On List", '/fetch', method: 'get', class: 'button is-info' %>
+                <%= button_to "Search Profile By User", '/searchByUser?user_login=""', method: 'get', class: 'button is-info' %>
+            </div>
+        </div>
+    </div>
+</section>

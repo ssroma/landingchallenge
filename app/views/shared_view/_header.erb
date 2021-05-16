@@ -1,0 +1,21 @@
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to "The Chellenge", root_path, class: "navbar-item is-size-3" %>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <%= link_to "Home", root_path, class: "navbar-item" %>
+      <%= link_to "Stored profiles", '/storedProfiles', class: "navbar-item" %>
+      <% if current_page?(controller: 'profile', action: 'show') %>
+        <%= link_to "Search On List", "/fetch", method: "get", class: "navbar-item" %>
+        <%= link_to "Search By User", "/searchByUser", method: "get", class: "navbar-item" %>
+      <% end %>
+    </div>
+  </div>
+</nav>
