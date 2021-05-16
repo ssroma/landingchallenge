@@ -1,0 +1,48 @@
+<div class="compare-section is-flex is-flex-direction-column is-align-items-center">
+    <div class="compare-column">
+            <div class="card" >
+                <div class="card-image" >
+                    <figure class="image is-48x48">
+                    <img src="<%= @leftUser['avatar_url'] %>" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-content">
+                        <p class="title is-2">Name : <%= @leftUser['name']%></p>
+                        <p class="title is-4">Login : <%= @leftUser['login']%></p>
+                        <hr/>
+                        <p class="subtitle is-6">Bio : <%= @leftUser['bio']%></p>
+                        <p class="subtitle is-6">Public Repos : <%= @leftUser['public_repos']%></p>
+                        <p class="subtitle is-6">Followers : <%= @leftUser['followers']%></p>
+                        <p class="subtitle is-6">Following : <%= @leftUser['following']%></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="compare-column">
+            <div class="card" >
+                <div class="card-image" >
+                    <figure class="image is-48x48">
+                    <img src="<%= @rightUser['avatar_url'] %>" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                    <div class="media-content">
+                        <p class="title is-2">Name : <%= @rightUser['name']%></p>
+                        <p class="title is-4">Login : <%= @rightUser['login']%></p>
+                        <hr/>
+                        <p class="subtitle is-6">Bio : <%= @rightUser['bio']%></p>
+                        <p class="subtitle is-6">Public Repos : <%= @rightUser['public_repos']%></p>
+                        <p class="subtitle is-6">Followers : <%= @rightUser['followers']%></p>
+                        <p class="subtitle is-6">Following : <%= @rightUser['following']%></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</div>
