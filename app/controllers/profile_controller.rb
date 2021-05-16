@@ -6,7 +6,6 @@ class ProfileController < ApplicationController
   def getProfileByUser
     if params.has_key?(:user_login)
       @searchProfiles = @searchProfiles.getUser(params[:user_login]);
-      logger.debug "Parrams :: #{@searchProfiles}"
     else
       @searchProfiles = Array.new
     end

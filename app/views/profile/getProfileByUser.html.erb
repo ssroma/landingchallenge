@@ -1,11 +1,9 @@
 <section class="section-serach-form">
    
     <div class="container">
-        <%
-=begin%>
- <%= toastr_flash %> 
-<%
-=end%>
+
+        <%= toastr_flash %> 
+
         <div class="div-form" >
             <%= form_tag("/fetchProfileByUser", :method => "get") do %>
             <%= label_tag(:user_login, "Search for:") %>
