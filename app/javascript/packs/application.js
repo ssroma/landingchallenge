@@ -8,6 +8,10 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+// Bulmar humberg menu
+import Bulmar from "./bulmarHumberger";
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+Bulmar();

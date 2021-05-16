@@ -1,2 +1,27 @@
-<h1>Profile#fetch</h1>
-<p>Find me in app/views/profile/fetch.html.erb</p>
+
+<div class="section is-flex is-flex-direction-column is-align-items-center">
+    <% @githubProfiles.each do |profile| %>
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-48x48">
+                <img src="<%= profile['avatar_url'] %>" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4"><%= profile['login']%></p>
+                        <p class="subtitle is-6"><%= profile['url']%></p>
+                    </div>
+                </div>
+                <div class="colum">
+                    <%= button_to "Save Profile", 
+                        {:controller => "profile", :action => "create",  :user_login => profile['login'] },
+                        class: 'button is-info' 
+                    %>
+                </div>
+            </div>
+            
+        </div>
+    <% end %>
+</div>
