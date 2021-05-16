@@ -1,7 +1,7 @@
 class ProfileController < ApplicationController
     # Create a instance of GithubApiService
     before_action :setGithubSearch, only: %i[ fetch fetchProfileByUser getProfileByUser create ]
-    #before_action :set_userProfile, only: %i[ destroy ]
+    before_action :set_userProfile, only: %i[ destroy ]
     
   def getProfileByUser
     if params.has_key?(:user_login)
@@ -28,7 +28,7 @@ class ProfileController < ApplicationController
   end
 
   def show
-    #@userProfile = UserProfile.all.order(updated_at: :desc)
+    @userProfile = UserProfile.all.order(updated_at: :desc)
   end
 
   def compare
@@ -69,7 +69,7 @@ class ProfileController < ApplicationController
   end
   
   def set_userProfile
-    #@userProfile = UserProfile.find(params[:id])
+    @userProfile = UserProfile.find(params[:id])
   end
 
   def createProfileObj(obj)

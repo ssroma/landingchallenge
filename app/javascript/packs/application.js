@@ -10,8 +10,11 @@ import "channels"
 
 // Bulmar humberg menu
 import Bulmar from "./bulmarHumberger";
+// Customized js to deal with the checkbox selections
+import CheckBox from "./customized";
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 Bulmar();
+CheckBox();
