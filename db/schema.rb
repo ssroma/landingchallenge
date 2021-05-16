@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_05_16_195215) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "user_profiles", force: :cascade do |t|
     t.string "node_id"
     t.string "login"

@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: theChallenge_development
+  host: localhost
+  username: postgres
+  password: "123456"
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -82,5 +85,5 @@ test:
 production:
   <<: *default
   database: theChallenge_production
-  username: theChallenge
+  username: postgres
   password: <%= ENV['THECHALLENGE_DATABASE_PASSWORD'] %>
