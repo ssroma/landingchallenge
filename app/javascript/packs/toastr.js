@@ -1,4 +1,4 @@
-global.toastr.options = {
+toastr.options = {
     "closeButton": true,
     "debug": false,
     "newestOnTop": false,

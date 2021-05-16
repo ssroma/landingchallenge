@@ -13,14 +13,10 @@
       <%= link_to "Home", root_path, class: "navbar-item" %>
       <%= link_to "Stored profiles", '/storedProfiles', class: "navbar-item" %>
     
-      <%
-=begin%>
- <% if current_page?(controller: 'profile', action: 'show') %>
+      <% if current_page?(controller: 'profile', action: 'show') %>
         <%= link_to "Search On List", "/fetch", method: "get", class: "navbar-item" %>
         <%= link_to "Search By User", "/searchByUser", method: "get", class: "navbar-item" %>
       <% end %> 
-<%
-=end%>
      
     </div>
   </div>
