@@ -1,2 +1,46 @@
-<h1>Profile#getProfileByUser</h1>
-<p>Find me in app/views/profile/getProfileByUser.html.erb</p>
+<section class="section-serach-form">
+   
+    <div class="container">
+        <%
+=begin%>
+ <%= toastr_flash %> 
+<%
+=end%>
+        <div class="div-form" >
+            <%= form_tag("/fetchProfileByUser", :method => "get") do %>
+            <%= label_tag(:user_login, "Search for:") %>
+            <%= text_field_tag(:user_login, '', class: 'input is-info' ) %>
+            <%= submit_tag("Search", class: 'button is-info') %>
+            <% end %>
+        </div>
+    </div>
+</section>
+
+
+<% if @searchProfiles.length > 0 %>
+
+</section class="section-user-desplay" >
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-48x48">
+                <img src="<%= @searchProfiles['avatar_url']%>" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                <div class="media-content">
+                    <p class="title is-4"><%= @searchProfiles['name']%></p>
+                    <p class="subtitle is-6"><%= @searchProfiles['url']%></p>
+                    <%= button_to "Save Profile", 
+                        {:controller => "profile", :action => "create",  :user_login => "#{@searchProfiles['login']}" },
+                        class: 'button is-info' 
+                    %>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<% end %>
+
