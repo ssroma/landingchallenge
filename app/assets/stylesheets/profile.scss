@@ -17,6 +17,37 @@
     width: 30% !important;
 }
 
+/* Get Profile by User */
+.section-search-form .div-form{
+    width: 90%;
+}
+
+.section-search-form .div-form .div-form-fields{
+    width: 80%;
+}
+
+.section-search-form .div-form .div-form-button{
+    width: 20%;
+}
+
+.section-search-form .div-form .div-form-button input{
+    width: 100%;
+}
+
+.section-search-form{
+    margin: 1rem 0rem;
+}
+.section-user-display .card-image figure{
+    width: 100%;
+    height: auto;
+    max-width: 12rem;
+}
+.user-not-found {
+    display: flex;
+    width: 30%;
+    margin: 2rem 0rem !important; 
+    padding: 1rem;
+}
 
 /* Compare  */
 
@@ -45,5 +76,9 @@
         display: flex;
         width: 60%;
         margin-bottom: .8rem; 
+    }
+
+    .section-search-form .div-form{
+        width: 60%;
     }
 }

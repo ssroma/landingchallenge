@@ -17,7 +17,12 @@ class GithubApiService
     # We have to refine this search 
     # and handle erros latter.
     def getUser(user)
-      self.class.get("/#{user}", @options)
+      #self.class.get("/#{user}", @options)
+      begin
+        self.class.get("/#{user}", @options)
+      rescue StandardError
+        return  "Error"
+      end
     end 
   
 end
