@@ -8,11 +8,6 @@
         <div class="div-form is-flex is-justify-content-center is-align-items-center">
             <div class="div-form-fields">
             <%= form_tag("/fetchProfileByUser", :method => "get") do %>
-            <%
-=begin%>
- <%= label_tag(:user_login, "Search for Profile:") %> 
-<%
-=end%>
             <%= text_field_tag(:user_login, '', class: 'input is-info' ) %>
             </div>
             <div class="div-form-button">

@@ -1,11 +1,11 @@
 
-<div class="section is-flex is-flex-direction-column is-align-items-center">
+<div class="section is-flex is-flex-direction-column is-align-items-center" data-turbolinks='false'>
 
     <%= toastr_flash %> 
     <h1 class="title is-2"> Profiles Saved </h1>
     
     <% @userProfile.each do |profile| %>
-        <div class="card" >
+        <div class="card" data-turbolinks='false'>
             <div class="card-image" >
                 <figure class="image is-48x48">
                 <img src="<%= profile['avatar_url'] %>" alt="Placeholder image">
@@ -26,10 +26,14 @@
                 </div>
             </div>
             <div class="container-checkBox is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-                <input type="checkbox" class="selectCheckbox" id="<%= profile['id'] %>" >
+                <input type="checkbox" class="selectCheckbox" id="<%= profile['id'] %>">
             </div>
         </div>
     <% end %>
 </div>
 
-<%= javascript_pack_tag 'customized'%>
+<%
+=begin%>
+ <%= javascript_pack_tag 'customized'%> 
+<%
+=end%>

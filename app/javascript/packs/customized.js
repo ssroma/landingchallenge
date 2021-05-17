@@ -9,7 +9,7 @@ const CheckBox = function(){
         const checkBoxes = document.querySelectorAll(".selectCheckbox");
         let max = 2;
         for(let i = 0; i < checkBoxes.length; i++ ){
-            checkBoxes[i].checked = false;
+            checkBoxes[i].removeAttribute('checked'); //checked = false;
             checkBoxes[i].addEventListener('click', (event) => {
                 selectiveCheck(event)
             });
@@ -18,7 +18,7 @@ const CheckBox = function(){
         function selectiveCheck (event) {
             let checkBoxChecked = document.querySelectorAll(".selectCheckbox:checked");
             if (checkBoxChecked.length == max ){
-                createLisk(checkBoxChecked);
+                createLink(checkBoxChecked, event);
             }else if (checkBoxChecked.length >= max + 1){
                 event.preventDefault();
             }else{
@@ -26,21 +26,21 @@ const CheckBox = function(){
             }
         }
     
-        function createLisk(checkList){
+        function createLink(checkList, event){
             let userId = [];
             for(let i = 0; i < checkList.length; i++ ){
                 let id = checkList[i].getAttribute('id');
                 userId.push(id);
             }
-            let linkPosition = checkList.length - 1;
-            let position = checkList[linkPosition].parentNode;
+            let id = event.target.getAttribute('id');
+            let linkPosition = document.getElementById(id).parentNode;
             let a = document.createElement('a');
             a.innerHTML= "Compare"
             a.classList.add('button')
             a.classList.add('is-info')
             a.classList.add('compareLink')
             a.setAttribute('href', `/compare?leftUser=${userId[0]}&rightUser=${userId[1]}`);
-            position.appendChild(a);
+            linkPosition.appendChild(a);
         }
     
         function removeLink(){
@@ -52,11 +52,11 @@ const CheckBox = function(){
                 }
             }
             let checkBoxChecked = document.querySelectorAll(".selectCheckbox:checked");
-            if(checkBoxChecked.length == 1){
+            if(checkBoxChecked.length > 0){
                 let checkedLink = checkBoxChecked[0].parentNode.querySelector('.compareLink');
-                    if(checkedLink){
-                        checkBoxChecked[0].parentNode.removeChild(checkedLink);
-                    }
+                if(checkedLink){
+                    checkBoxChecked[0].parentNode.removeChild(checkedLink);
+                }
             }  
         }
     
