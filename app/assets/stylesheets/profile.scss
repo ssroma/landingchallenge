@@ -56,6 +56,15 @@
 
 /* Compare  */
 
+.container-compare-section{
+    width: 100%;
+}
+
+.container-compare-section h1{
+    text-align: center;
+    margin: .5rem 0px;
+}
+
 .compare-section {
     flex-direction: column !important;
 }
@@ -93,5 +102,9 @@
 
     .user-not-found {
         width: 40%;
+    }
+
+    .container-compare-section h1{
+        margin: 2.5rem 0px;
     }
 }
