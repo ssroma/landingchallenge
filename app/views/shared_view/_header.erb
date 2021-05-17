@@ -13,9 +13,9 @@
       <%= link_to "Home", root_path, class: "navbar-item" %>
       
       <% if current_page?(controller: 'profile', action: 'compare') %>
-        <%= link_to "Return to Strored Profile", "/storedProfiles", method: "get", class: "navbar-item" %>
+        <%= link_to "Return to Profiles Saved", "/storedProfiles", method: "get", class: "navbar-item" %>
       <% else %> 
-        <%= link_to "Stored profiles", '/storedProfiles', class: "navbar-item" %>
+        <%= link_to "Profiles Saved", '/storedProfiles', class: "navbar-item" %>
       <%end%>
     
       <% if current_page?(controller: 'profile', action: 'show') %>
