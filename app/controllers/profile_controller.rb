@@ -55,7 +55,7 @@ class ProfileController < ApplicationController
 
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to storedProfiles_path, notice: "User was successfully created." }
+        format.html { redirect_to storedProfiles_path, notice: "User was successfully Stored." }
         format.json { render :show, status: :created, location: profile_show_path }
       else
         format.html { render :show, status: :unprocessable_entity }
@@ -67,7 +67,7 @@ class ProfileController < ApplicationController
   def destroy
     @userProfile.destroy
     respond_to do |format|
-      format.html { redirect_to storedProfiles_path, alert: "User was successfully destroyed." }
+      format.html { redirect_to storedProfiles_path, alert: "User was successfully Deleted." }
       format.json { head :no_content }
     end
   end

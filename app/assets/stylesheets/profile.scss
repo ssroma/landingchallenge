@@ -52,7 +52,7 @@
 /* Compare  */
 
 .compare-section {
-    flex-direction: row !important;
+    flex-direction: column !important;
 }
 .compare-section .compare-column{
     width: 50%;
@@ -80,5 +80,13 @@
 
     .section-search-form .div-form{
         width: 60%;
+    }
+
+    .compare-section {
+        flex-direction: row !important;
+    }
+
+    .user-not-found {
+        width: 80%;
     }
 }

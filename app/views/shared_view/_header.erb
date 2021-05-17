@@ -17,6 +17,10 @@
         <%= link_to "Search On List", "/fetch", method: "get", class: "navbar-item" %>
         <%= link_to "Search By User", "/searchByUser", method: "get", class: "navbar-item" %>
       <% end %> 
+
+      <% if current_page?(controller: 'profile', action: 'compare') %>
+        <%= link_to "Retorn to Strored Profile", "/storedProfiles", method: "get", class: "navbar-item" %>
+      <% end %> 
      
     </div>
   </div>
